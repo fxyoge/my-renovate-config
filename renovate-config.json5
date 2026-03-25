@@ -24,7 +24,6 @@
         "rss-bridge"
       ],
       "automergeType": "branch",
-      "platformAutomerge": true,
       "automerge": true
     }
   ]
