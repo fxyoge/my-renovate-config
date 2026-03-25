@@ -1,0 +1,31 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended"
+  ],
+  "separateMajorMinor": false,
+  "automergeType": "pr",
+  "automerge": false,
+  "platformAutomerge": false,
+  "pinDigests": true,
+  "packageRules": [
+    {
+      "internalChecksFilter": "strict",
+      "matchDepTypes": [
+        "action"
+      ],
+      "automerge": true,
+      "minimumReleaseAge": "3 days"
+    },
+    {
+      "extends": ["schedule:weekends"],
+      "matchPackageNames": [
+        "rsshub",
+        "rss-bridge"
+      ],
+      "automergeType": "branch",
+      "platformAutomerge": true,
+      "automerge": true
+    }
+  ]
+}
